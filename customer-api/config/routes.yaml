@@ -1,0 +1,16 @@
+api:
+  path: /api
+  controller: App\Controller\AuthController::api
+  prefix: api
+
+login_check:
+  path:     /login
+  methods:  [POST]
+
+gesdinet_jwt_refresh_token:
+  path: /api/token/refresh
+  controller: gesdinet.jwtrefreshtoken::refresh
+
+order:
+  resource  : App\Controller\OrderController
+  prefix    : api

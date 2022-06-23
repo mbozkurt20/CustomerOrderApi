@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "26f06f07-de99-4042-9ec7-6b5cc02e37ac",
+		"name": "Path Keys",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC90b29sZ3VpZGUuYmVua2ltbWl5aW0uY29tXC9sb2dpbiIsImlhdCI6MTY1MDU0MzY2MSwiZXhwIjoxNjUwNTQ3MjYxLCJuYmYiOjE2NTA1NDM2NjEsImp0aSI6IkJMUUpSeDM0QVZQQ01TTm8iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.df65dRw0pl8BmHR66VXYCslI0F_RQaSAGgdOtnQc2dg"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "customer1",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "customer123.",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC90b29sZ3VpZGUuYmVua2ltbWl5aW0uY29tXC9sb2dpbiIsImlhdCI6MTY1MDU0MzY2MSwiZXhwIjoxNjUwNTQ3MjYxLCJuYmYiOjE2NTA1NDM2NjEsImp0aSI6IkJMUUpSeDM0QVZQQ01TTm8iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.df65dRw0pl8BmHR66VXYCslI0F_RQaSAGgdOtnQc2dg"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "customer",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "product",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "orderCode",
+									"value": "examp-2134",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "21",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Kınıklı",
+									"type": "text"
+								},
+								{
+									"key": "shippingDate",
+									"value": "2022-06-23 11:05:32",
+									"description": "Date Format: Y-m-d H:i:s",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{url}}/api/order"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC90b29sZ3VpZGUuYmVua2ltbWl5aW0uY29tXC9sb2dpbiIsImlhdCI6MTY1MDU0MzY2MSwiZXhwIjoxNjUwNTQ3MjYxLCJuYmYiOjE2NTA1NDM2NjEsImp0aSI6IkJMUUpSeDM0QVZQQ01TTm8iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.df65dRw0pl8BmHR66VXYCslI0F_RQaSAGgdOtnQc2dg"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "customer",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "product",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "orderCode",
+									"value": "examp-21421",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Asmalıevler",
+									"type": "text"
+								},
+								{
+									"key": "shippingDate",
+									"value": "2022-06-23 11:30:41",
+									"description": "Date Format: Y-m-d H:i:s",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{url}}/api/order/8"
+					},
+					"response": []
+				},
+				{
+					"name": "all list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/api/orders"
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/api/order/7"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
