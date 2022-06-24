@@ -10,6 +10,10 @@ git clone https://github.com/mbozkurt20/CustomerOrderApi.git
 ---------------
 # Docker run commands
 
+cd customer-api
+
+cp env.dist .env
+
 cd docker
 
 docker-compose up
@@ -18,13 +22,9 @@ docker-compose up
 
 # Project run commands
 
-cd customer-api
-
-cp env.dist .env
-
 --docker exec -it [image_name] sh
 
-php bin/console doctrine:database:create
+--php bin/console doctrine:database:create
 
 php bin/console doctrine:schema:update --force
 
